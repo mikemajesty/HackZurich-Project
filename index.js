@@ -1,8 +1,10 @@
-var express = require('express');
-var app = express();
-var User = require('./data/model/user');
-var userController = require('./controller/userController');
-var parser = require('body-parser');
+/**
+ * Dependencies
+ */
+const express = require('express');
+const app = express();
+const clientController = require('./controller/clientController');
+const parser = require('body-parser');
 
 app.use(parser());
 
@@ -17,14 +19,16 @@ app.get('/', function(request, response) {
   response.render('pages/index');
 });
 
-app.get('/test', function(request, response) {
-  User.find({}, function(err, data) {
-    response.send(data);
-  });
-});
+/**
+ * API Endpoints
+ */
 
-app.post("/api/users", userController.save);
+app.post("/api/clients", clientController.save);
+app.get('/api/clients', clientController.all);
 
+/**
+ * Server startup
+ */
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
 });

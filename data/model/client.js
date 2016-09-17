@@ -1,6 +1,12 @@
-var mongoose = require('../connection');
+/**
+ * Dependencies.
+ */
+const mongoose = require('../connection');
 
-var user = mongoose.Schema({
+/**
+ * Client document definition.
+ */
+const client = mongoose.Schema({
     name: String,
     phoneNumber: String,
     ipv4: String,
@@ -21,6 +27,7 @@ var user = mongoose.Schema({
     manufacturer: String
 });
 
-var User = mongoose.model('User', user);
-
-module.exports = User
+/**
+ * Export client model.
+ */
+module.exports = mongoose.model('Client', client);
