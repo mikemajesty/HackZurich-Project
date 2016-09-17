@@ -1,7 +1,10 @@
 var express = require('express');
 var app = express();
 var User = require('./data/model/user');
-var userService = require('./service/userService');
+var userController = require('./controller/userController');
+var parser = require('body-parser');
+
+app.use(parser());
 
 var user = new User({
     name: "",
@@ -26,8 +29,6 @@ var user = new User({
     manufacturer: ""
 });
 
-userService.save([user]);
-
 app.set('port', (process.env.PORT || 5000));
 
 app.use(express.static(__dirname + '/public'));
@@ -39,11 +40,17 @@ app.get('/', function(request, response) {
   response.render('pages/index');
 });
 
+app.get('/', function(request, response) {
+  response.render('pages/index');
+});
+
 app.get('/test', function(request, response) {
   User.find({}, function(err, data) {
     response.send(data);
   });
 });
+
+app.post("/api/test", userController.save);
 
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
