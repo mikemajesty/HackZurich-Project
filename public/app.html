@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="yoruba">
+  <head>
+    <meta charset="utf-8">
+    <title>HackZurich 2016 - Yoruba</title>
+    <link type="text/css" rel="stylesheet" href="./css/app.css" />
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+  </head>
+  <body ng-controller='AppCtrl'>
+    <div ng-view>
+
+    </div>
+    <h1>welcome, hackzurich staaaaffffff member!</h1>
+    <p>
+      Yoruba is a real-time indoor tracking & messenger.
+    </p>
+    <p>
+      Try it out messaging whoever you want inside HackZurich 2016!
+    </p>
+    <form ng-if="clients">
+      <table>
+        <thead>
+          <tr>
+            <th><input type="checkbox"></th>
+            <th>Area</th>
+            <th>Phone Number</th>
+            <th>Mac Address</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="client in clients">
+              <td><input type="checkbox"></td>
+              <td>{{ client.area }}</td>
+              <td>{{ client.number }}</td>
+              <td>{{ client.mac }}</td>
+          </tr>
+        </tbody>
+      </table>
+      <label>your message</label>
+      <input type="text" ng-model="$parent.basicMessage">
+      <button type="submit" ng-click="sendBasicMessage()">send message</button>
+    </form>
+    <a href="./app.html">go to the dashboard</a>
+  </body>
+</html>
