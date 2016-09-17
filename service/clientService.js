@@ -7,14 +7,14 @@ const Client = require('../data/model/client');
  * Return all clients without pagination
  */
 const all = () => {
-    return Client.find();
+    return Client.find().sort({clientMac: 1});
 }
 
 /**
  * Return by a criteria
  */
 const find = (query) => {
-    return Client.find(query);
+    return Client.find(query).sort({clientMac: 1});
 }
 
 /**

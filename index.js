@@ -19,7 +19,7 @@ clientService.preload();
 /**
  * Express Start
  */
-app.use(timeout(120000));
+app.use(timeout(640000));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json({limit: '50mb', strict:false}));
 

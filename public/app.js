@@ -13,32 +13,34 @@
     //  return;
     //});
 
-    $scope.clients = [
-    ];
+    $scope.clients = [];
 
     var MINUTE = 2;
     var myStartDate = new Date();
     myStartDate.setMinutes(myStartDate.getMinutes() - MINUTE);
-    $scope.date = myStartDate;
+    $scope.date = myStartDate.toISOString();
 
     $interval(() => {
         $http.get('/api/clients').then((res) => {
-            if (!$scope.clients.length) {
-              $scope.clients = res.data;
-              return;
-            }
+            // if (!$scope.clients.length) {
+            //   $scope.clients = res.data;
+            //   return;
+            // }
 
-            res.data.forEach(function(newClient) {
-              $scope.clients.forEach(function(currentClient) {
-                if (newClient.clientMac == currentClient.clientMac) {
-                  currentClient.Location = currentClient.Location;
+            $scope.clients.filter((client) => {
+                return client.visible;
+            }).forEach((client) => {
+                for (var i = 0; i < res.data.length; i++) {
+                    if (res.data[i].clientMac == client.clientMac) {
+                        res.data[i].visible = client.visible;
+
+                        break;
+                    } 
                 }
-              });
             });
 
-            // .filter((element) => {
-            //     return element.clientMac === '30:cb:f8:ad:0f:1a';
-            // });
+            $scope.clients = res.data;
+
         }, (error) => {
             console.log(error);
         });
