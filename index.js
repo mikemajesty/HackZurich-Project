@@ -1,27 +1,12 @@
 var express = require('express');
 var app = express();
-var mongoose = require('mongoose');
+var User = require('./data/model/user');
 
-mongoose.connect('mongodb://localhost/test');
+var user = new User({ name: 'Mike Lima', fullNumber: '1532483712', macAdress: '3434234234324234', active: true });
 
-var db = mongoose.connection;
-db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', function() {
-  console.log("Connection Ok!!");
-});
-
-var test = mongoose.Schema({
-    name: String,
-    adress: String
-});
-
-var Test = mongoose.model('Test', test);
-
-var test = new Test({ name: 'Silence', adress: 'um adress' });
-
-test.save(function (err, test) {
+user.save(function (err, user) {
   if (err) return console.error(err);
-  console.log(test.name);
+  console.log(user.name);
 });
 
 
