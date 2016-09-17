@@ -55,6 +55,7 @@ aside,
   bottom: 20px;
   opacity: 0.9;
   transition: all .2s ease;
+  overflow: hidden;
 
   &:hover {
     opacity: 1;
@@ -73,6 +74,10 @@ aside,
   position: absolute;
   top: 0;
   width: 100%;
+
+  tr:nth-of-type(2) {
+    padding-left: 20px;
+  }
 }
 
 .table-overflow {
@@ -108,10 +113,6 @@ aside,
   td:nth-of-type(3) {
     width: 15% !important;
   }
-}
-
-tbody {
-  overflow: scroll;
 }
 
 .top-table tr:first-of-type {

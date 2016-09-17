@@ -18,7 +18,19 @@
 
     $interval(() => {
         $http.get('/api/clients').then((res) => {
-            $scope.clients = res.data;
+            if (!$scope.clients.length) {
+              $scope.clients = res.data;
+              return;
+            }
+
+            res.data.forEach(function(newClient) {
+              $scope.clients.forEach(function(currentClient) {
+                if (newClient.clientMac == currentClient.clientMac) {
+                  currentClient.Location = currentClient.Location;
+                }
+              });
+            });
+
             // .filter((element) => {
             //     return element.clientMac === '30:cb:f8:ad:0f:1a';
             // });
@@ -35,8 +47,6 @@
 
       console.log('basicMessage: ', $scope.basicMessage);
     };
-
-    console.log($scope.clients);
   }]);
 
 })(angular);
