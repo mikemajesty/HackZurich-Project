@@ -8,8 +8,8 @@
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,width=device-width">
     <meta name="theme-color" content="#4bbf6b">
 
-    <link type="text/css" rel="stylesheet" href="./css/app.css" />
     <link type="text/css" rel="stylesheet" href="./css/materialize.min.css" />
+    <link type="text/css" rel="stylesheet" href="./css/app.css" />
 
     <script type="text/javascript" src="angular.min.js"></script>
     <script type="text/javascript" src="app.js"></script>
@@ -61,7 +61,66 @@
                 icon="/images/dot.png">
         </marker>
     </ng-map>
-    <div class="card" style="position:absolute;top:20px;right:20px;width:200px;bottom:20px">
+    <aside class="card">
+      <div class="table-wrapper">
+        <table class="top-table">
+          <tr>
+            <th colspan="3">Persons In HackZurich 2016</th>
+          </tr>
+          <tr>
+            <td>
+              <div class="switch">
+                <label>
+                  Hide Safe
+                  <input type="checkbox" ng-model="hideSafe" value="false">
+                  <span class="lever"></span>
+                </label>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th width="40">
+              <input type="checkbox" ng-model="showAll" checked>
+              <label></label>
+            </th>
+            <th data-field="name" class="text-left">MAC Address</th>
+            <th data-field="price">Safe</th>
+          </tr>
+        </table>
+        <div class="table-overflow">
+          <table>
+            <tr ng-repeat="client in clients">
+              <td width="40">
+                <input type="checkbox" ng-model="client.show">
+                <label></label>
+              </td>
+              <td class="text-left">{{ client.clientMac }}</td>
+              <td>
+                <div class="switch">
+                  <label>
+                    <input type="checkbox">
+                    <span class="lever"></span>
+                  </label>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </aside>
+    <div class="filters">
+      <h2>filters</h2>
+      <ul>
+        <li>
+          <div class="switch">
+            <label>
+              Hide Safe
+              <input type="checkbox" ng-model="hideSafe" value="false">
+              <span class="lever"></span>
+            </label>
+          </div>
+        </li>
+      </ul>
     </div>
   </body>
 </html>

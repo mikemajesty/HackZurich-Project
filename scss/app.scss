@@ -8,6 +8,11 @@ html {
 
     body {
         height: 100%;
+        position: relative;
+
+        @media (min-width: 768px) {
+          max-height: 100vh;
+        }
     }
 }
 
@@ -19,10 +24,6 @@ button {
   text-align: center;
 }
 
-table {
-  border: 2px solid #333;
-  margin: 0 auto;
-}
 
 header {
   background-color: $main-color;
@@ -41,5 +42,106 @@ header {
 .welcome {
   p {
     margin: .75rem 0;
+  }
+}
+
+aside,
+.card {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 320px;
+  height: 80vh;
+  bottom: 20px;
+  opacity: 0.9;
+  transition: all .2s ease;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.text-left {
+  text-align: left;
+}
+
+.table-wrapper {
+  position: relative;
+}
+
+.table-top {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.table-overflow {
+  overflow: scroll;
+
+  table {
+    height: 100%;
+  }
+}
+
+.table-overflow {
+  overflow: auto;
+  height: 65vh;
+
+  table tr {
+    td:nth-of-type(2) {
+      width: 80% !important;
+    }
+
+    td:nth-of-type(3) {
+      width: 15% !important;
+    }
+  }
+}
+
+.top-table tr:nth-of-type(3) {
+  border-bottom: 2px solid $main-color;
+
+  td:nth-of-type(2) {
+    width: 80% !important;
+  }
+
+  td:nth-of-type(3) {
+    width: 15% !important;
+  }
+}
+
+tbody {
+  overflow: scroll;
+}
+
+.top-table tr:first-of-type {
+  background: $main-color;
+  color: #fff;
+  font-weight: bold;
+}
+
+th,
+td {
+  text-align: center;
+}
+
+.filters {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  border-top: 2px solid $main-color;
+  text-align: center;
+  padding: 10px;
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  ul {
+    width: 100%;
+    margin: 5px 0 0 0;
+    padding: 0;
   }
 }
