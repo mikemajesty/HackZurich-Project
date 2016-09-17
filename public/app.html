@@ -22,7 +22,7 @@
   </head>
   <body ng-controller='AppCtrl'>
     <ng-map center="[47.389850, 8.515632]" zoom="19" style="width:100%;height:100%;" mapTypeControl="false">
-        <marker ng-repeat="client in clients"
+        <marker ng-repeat="client in clients" ng-if="client.visible"
                 position="[{{client.location.lat}}, {{client.location.lng}}]"
                 icon="/images/dot.png">
         </marker>
@@ -38,8 +38,8 @@
               <input type="checkbox" ng-model="showAll" name="showAll" checked>
               <label for="showAll"></label>
             </th>
-            <th data-field="name" class="text-left">MAC Address</th>
-            <th data-field="price">Safe</th>
+            <th class="text-left">MAC Address</th>
+            <th>Visible</th>
           </tr>
         </table>
         <div class="table-overflow">
@@ -53,7 +53,7 @@
               <td>
                 <div class="switch">
                   <label>
-                    <input type="checkbox">
+                    <input type="checkbox" ng-model="client.visible">
                     <span class="lever"></span>
                   </label>
                 </div>
