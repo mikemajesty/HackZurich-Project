@@ -53,6 +53,18 @@ const save = (clients) => {
     });
 }
 
+const savePhone = (mac, phone) => {
+    Client.findOne({clientMac: mac}).then((clientDB) => {
+          if (clientDB) {
+              clientDB.phoneNumber = phone;
+          } else {
+              clientDB = new Client({clientMac:mac, phoneNumber:phone});
+          }
+
+          clientDB.save();
+    });
+}
+
 /**
  * Export methods
  */
@@ -60,5 +72,6 @@ module.exports = {
     all,
     find,
     preload,
-    save
+    save,
+    savePhone
 }
