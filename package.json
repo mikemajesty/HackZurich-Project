@@ -13,7 +13,8 @@
     "body-parser": "^1.15.2",
     "ejs": "2.4.1",
     "express": "4.13.3",
-    "mongoose": "^4.6.0"
+    "mongoose": "^4.6.0",
+    "twilio": "^2.9.3"
   },
   "repository": {
     "type": "git",

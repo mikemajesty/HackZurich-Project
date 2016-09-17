@@ -4,7 +4,20 @@
 const express = require('express');
 const app = express();
 const clientController = require('./controller/clientController');
+const clientService = require('./service/clientService');
+const messageController = require('./controller/messageController');
 const parser = require('body-parser');
+
+/**
+ * Preloaded data
+ */
+
+clientService.preload();
+
+
+/**
+ * Express Start
+ */
 
 app.use(parser());
 
@@ -25,6 +38,8 @@ app.get('/', function(request, response) {
 
 app.post("/api/clients", clientController.save);
 app.get('/api/clients', clientController.all);
+
+app.post("/api/messages", messageController.save);
 
 /**
  * Server startup
