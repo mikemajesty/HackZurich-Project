@@ -5,7 +5,7 @@ if (process.env.PROD_MONGODB) {
     mongoURL = process.env.PROD_MONGODB;
 }
 
-mongoose.connect();
+mongoose.connect(mongoURL);
 
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
