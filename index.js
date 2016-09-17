@@ -6,6 +6,7 @@ const app = express();
 const clientController = require('./controller/clientController');
 const clientService = require('./service/clientService');
 const messageController = require('./controller/messageController');
+const pollController = require('./controller/pollController');
 const bodyParser = require('body-parser');
 const timeout = require('connect-timeout');
 
@@ -57,6 +58,8 @@ app.get('/api/clients', clientController.all);
 
 app.post("/api/messages", messageController.save);
 
+
+app.post('/poll/', pollController.save);
 /**
  * Server startup
  */
