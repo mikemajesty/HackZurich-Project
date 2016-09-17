@@ -56,7 +56,10 @@
     </section>
     <section class="map" style="height:500px;">
       <ng-map center="[47.389850, 8.515632]" zoom="19" style="height:500px">
-          <marker ng-repeat="client in clients" position="[{{client.location.lat}}, {{client.location.lng}}]"></marker>
+          <marker ng-repeat="client in clients"
+                  position="[{{client.location.lat}}, {{client.location.lng}}]"
+                  icon="/images/dot.png">
+          </marker>
       </ng-map>
     </section>
   </body>

@@ -22,7 +22,7 @@
         }, (error) => {
             console.log(error);
         });
-    }, 5000, 0);
+    }, 1000, 0);
 
     $scope.sendBasicMessage = function() {
       //$http.post('/api/basicMessage', { users: $scope.clients, message: $scope.basicMessage } )
