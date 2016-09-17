@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 /**
  * Lookup for mongo connection url
  */
-const mongoURL = 'mongodb://localhost/hackzurich';
+var mongoURL = 'mongodb://localhost/hackzurich';
 if (process.env.PROD_MONGODB) {
     mongoURL = process.env.PROD_MONGODB;
 }
