@@ -6,7 +6,7 @@ const app = express();
 const clientController = require('./controller/clientController');
 const clientService = require('./service/clientService');
 const messageController = require('./controller/messageController');
-// const bodyParser = require('body-parser');
+const bodyParser = require('body-parser');
 
 /**
  * Preloaded data
