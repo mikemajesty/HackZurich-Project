@@ -507,12 +507,36 @@ td {
   display: flex;
   -webkit-flex-flow: column;
   -ms-flex-flow: column;
-  flex-flow: column; }
+  flex-flow: column;
+  background-image: url("../images/header-bg.jpg");
+  background-size: 100%;
+  z-index: 1;
+  position: relative;
+  background-position: top center; }
+  .index header:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #4bbf6b;
+    opacity: .9;
+    width: 100%;
+    height: 100%;
+    content: '';
+    z-index: -1; }
+  .index header .powered-by,
+  .index header .key-features {
+    display: none; }
   @media (min-width: 1024px) {
     .index header {
       -webkit-flex-flow: row wrap;
       -ms-flex-flow: row wrap;
-      flex-flow: row wrap; } }
+      flex-flow: row wrap;
+      text-align: center; }
+      .index header h2 {
+        text-align: center; }
+      .index header .powered-by,
+      .index header .key-features {
+        display: block; } }
 
 .index .intro {
   margin: auto;
@@ -523,20 +547,25 @@ td {
   width: 90%;
   max-width: 280px; }
   .index .form-wrapper form {
-    background-color: rgba(0, 0, 0, 0.3);
+    border: 4px solid rgba(0, 0, 0, 0.3);
     padding: 10px;
     -webkit-border-radius: 4px;
-    border-radius: 4px; }
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.3); }
   .index .form-wrapper button {
     padding: 1rem !important;
     display: block;
     -webkit-transition: all .2s ease;
-    transition: all .2s ease; }
+    transition: all .2s ease;
+    background: #fff;
+    color: #4bbf6b !important; }
     .index .form-wrapper button:hover {
-      background: #2fccbc; }
+      color: #fff !important;
+      background: #4bbf6b; }
   .index .form-wrapper button,
   .index .form-wrapper input {
     margin: .5rem auto;
+    color: #fff;
     text-align: center; }
 
 .index h1 {
