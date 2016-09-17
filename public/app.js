@@ -16,7 +16,7 @@
     $scope.clients = [
     ];
 
-    var MINUTE = 5;
+    var MINUTE = 2;
     var myStartDate = new Date();
     myStartDate.setMinutes(myStartDate.getMinutes() - MINUTE);
     $scope.date = myStartDate;

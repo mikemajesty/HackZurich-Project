@@ -5,6 +5,7 @@ $main-color: #4bbf6b;
 
 html {
     height: 100%;
+    font-family: 'Montserrat', sans-serif;
 
     body {
         height: 100%;
@@ -144,5 +145,28 @@ td {
     width: 100%;
     margin: 5px 0 0 0;
     padding: 0;
+  }
+}
+
+.index {
+  header {
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column;
+  }
+
+  h1,
+  h2,
+  p {
+    margin: auto;
+  }
+
+  h1 {
+    font-weight: bold;
+    letter-spacing: 0.4;
+  }
+
+  h2 {
+    font-size: 2rem;
   }
 }
