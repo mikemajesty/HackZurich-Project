@@ -17,7 +17,7 @@
             <h2>Welcome to HackZurich Poll</h1>
             <h3>What is your favorite programming language ?</h2>
             <form id="poll" action="/poll" method="POST">
-                <p><input name='answer' type='radio' id='programming_1' value='Java' /><label for='programming_1'>Java</label></p>
+                <p><input name='answer' type='radio' id='programming_1' value='Java' selected /><label for='programming_1'>Java</label></p>
                 <p><input name='answer' type='radio' id='programming_2' value='C' /><label for='programming_2'>C</label></p>
                 <p><input name='answer' type='radio' id='programming_3' value='C++' /><label for='programming_3'>C++</label></p>
                 <p><input name='answer' type='radio' id='programming_4' value='C#' /><label for='programming_4'>C#</label></p>
@@ -44,7 +44,7 @@
                 <p><input name='answer' type='radio' id='programming_46' value='Rust' /><label for='programming_46'>Rust</label></p>
                 <p><input name='answer' type='radio' id='programming_51' value='Clojure' /><label for='programming_51'>Clojure</label></p>
                 <p class="input-field" style="margin-top:20px">
-                    <input id="phone" type="text" required>
+                    <input id="phone" type="text" required placeholder="+551199999999">
                     <label for="phone">Cellphone number</label>
                 </p>
 
