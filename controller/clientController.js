@@ -7,7 +7,7 @@ const clientService = require('../service/clientService');
  * List all clients endpoint.
  */
 const all = (req, res) => {
-    clientService.all().then((clients) => {
+    clientService.find({os:{ $in: [null, 'iOS', 'Android']}}).then((clients) => {
         res.status(200).send(clients);
     });
 }
@@ -16,7 +16,6 @@ const all = (req, res) => {
  * Save a list of clients from Cisco Meraki.
  */
 const save = (req, res) => {
-    console.log(req.body);
     clientService.save(req.body);
 
     res.status(200).send();
