@@ -10,7 +10,6 @@ const all = (req, res) => {
     var MINUTE = 5;
     var myStartDate = new Date();
     myStartDate.setMinutes(myStartDate.getMinutes() - MINUTE);
-    console.log(myStartDate);
     clientService.find({os:{ $in: [null, 'iOS', 'Android']}, seenTime: {$gte: myStartDate.toISOString()} })
     .then((clients) => {
         res.status(200).send(clients);
