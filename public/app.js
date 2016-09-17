@@ -2,7 +2,7 @@
   'use strict';
   angular.module("yoruba", ['ngMap'])
 
-  .controller('AppCtrl', ['$http', '$scope', function($http, $scope) {
+  .controller('AppCtrl', ['$http', '$interval', '$scope', function($http, $interval, $scope) {
     console.log('ctrl loaded');
 
     $scope.basicMessage = '';
@@ -14,33 +14,15 @@
     //});
 
     $scope.clients = [
-    //   {
-    //     area: '+55',
-    //     number: '15996441056',
-    //     mac: 'b3:ed:45:79:a2:58'
-    //   },
-    //   {
-    //     area: '+55',
-    //     number: '15996441056',
-    //     mac: 'b3:ed:45:79:a2:58'
-    //   },
-    //   {
-    //     area: '+55',
-    //     number: '15996441056',
-    //     mac: 'b3:ed:45:79:a2:58'
-    //   },
-    //   {
-    //     area: '+55',
-    //     number: '15996441056',
-    //     mac: 'b3:ed:45:79:a2:58'
-    //   },
     ];
 
-    $http.get('/api/clients').then((res) => {
-        $scope.clients = res.data;
-    }, (error) => {
-        console.log(error);
-    });
+    $interval(() => {
+        $http.get('/api/clients').then((res) => {
+            $scope.clients = res.data;
+        }, (error) => {
+            console.log(error);
+        });
+    }, 5000, 0);
 
     $scope.sendBasicMessage = function() {
       //$http.post('/api/basicMessage', { users: $scope.clients, message: $scope.basicMessage } )

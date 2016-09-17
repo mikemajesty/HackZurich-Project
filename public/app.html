@@ -31,17 +31,21 @@
           <thead>
             <tr>
               <th><input type="checkbox"></th>
-              <th>Name</th>
-              <th>Phone Number</th>
+              <!--<th>Name</th>
+              <th>Phone Number</th>-->
               <th>Mac Address</th>
+              <th>Lat</th>
+              <th>Lng</th>
             </tr>
           </thead>
           <tbody>
             <tr ng-repeat="client in clients">
                 <td><input type="checkbox"></td>
-                <td>{{ client.name }}</td>
-                <td>{{ client.phoneNumber }}</td>
+                <!--<td>{{ client.name }}</td>
+                <td>{{ client.phoneNumber }}</td>-->
                 <td>{{ client.clientMac }}</td>
+                <td>{{ client.location.lat }}</td>
+                <td>{{ client.location.lng }}</td>
             </tr>
           </tbody>
         </table>
