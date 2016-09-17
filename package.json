@@ -10,6 +10,7 @@
     "start": "node index.js"
   },
   "dependencies": {
+    "angular": "^1.5.8",
     "ejs": "2.4.1",
     "express": "4.13.3",
     "mongoose": "^4.6.0"
