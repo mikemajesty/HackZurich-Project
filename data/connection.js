@@ -1,9 +1,9 @@
 var mongoose = require('mongoose');
 
 var mongoURL = 'mongodb://localhost/test';
-// if (process.env.PROD_MONGODB) {
-//     mongoURL = process.env.PROD_MONGODB;
-// }
+if (process.env.PROD_MONGODB) {
+    mongoURL = process.env.PROD_MONGODB;
+}
 
 mongoose.connect(mongoURL);
 
