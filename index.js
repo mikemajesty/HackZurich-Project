@@ -3,16 +3,35 @@ var app = express();
 var User = require('./data/model/user');
 var userService = require('./service/userService');
 
-var user = new User({ name: 'Gabrel Lima', fullNumber: '1532483712', macAdress: '3434234234324234', active: true });
+var user = new User({
+    name: "",
+    fullNumber: "",
+    macAdress: "",
+    active: true,
+    ipv4: "",
+    location:
+     { lat: 245235,
+       lng: 23452435,
+       unc: 345665,
+       x: [534657],
+       y: [7968576]
+    },
+    seenTime: "gfdf",
+    ssid: "String",
+    os: "",
+    clientMac: "",
+    seenEpoch: 123456543,
+    rssi: 1234567,
+    ipv6: "",
+    manufacturer: ""
+});
 
 userService.save([user]);
-
 
 app.set('port', (process.env.PORT || 5000));
 
 app.use(express.static(__dirname + '/public'));
 
-// views is directory for all template files
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
