@@ -40,7 +40,7 @@ app.get('/', function(request, response) {
 });
 
 app.get('/test', function(request, response) {
-  Test.find({}, function(err, data) {
+  User.find({}, function(err, data) {
     response.send(data);
   });
 });
