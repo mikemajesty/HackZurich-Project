@@ -4,20 +4,29 @@
 const express = require('express');
 const app = express();
 const clientController = require('./controller/clientController');
+const clientService = require('./service/clientService');
+const messageController = require('./controller/messageController');
 const parser = require('body-parser');
+
+/**
+ * Preloaded data
+ */
+
+clientService.preload();
+
+
+/**
+ * Express Start
+ */
 
 app.use(parser());
 
 app.set('port', (process.env.PORT || 5000));
 
-app.use(express.static(__dirname + '/public'));
+app.use('/', express.static(__dirname + '/public'));
 
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
-
-app.get('/', function(request, response) {
-  response.render('pages/index');
-});
 
 /**
  * API Endpoints
@@ -25,6 +34,8 @@ app.get('/', function(request, response) {
 
 app.post("/api/clients", clientController.save);
 app.get('/api/clients', clientController.all);
+
+app.post("/api/messages", messageController.save);
 
 /**
  * Server startup

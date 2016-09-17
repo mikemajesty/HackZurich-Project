@@ -27,6 +27,8 @@ const client = mongoose.Schema({
     manufacturer: String
 });
 
+client.index({ type: 1, clientMac: 1 }, { unique: true });
+
 /**
  * Export client model.
  */
