@@ -526,6 +526,21 @@ td {
   .index header .powered-by,
   .index header .key-features {
     display: none; }
+  .index header .powered-by {
+    position: absolute;
+    bottom: 2%;
+    left: 2%; }
+    .index header .powered-by ul,
+    .index header .powered-by li {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex; }
+    .index header .powered-by ul {
+      height: 40px; }
+    .index header .powered-by img {
+      margin: auto 1rem;
+      width: 80px; }
   @media (min-width: 1024px) {
     .index header {
       -webkit-flex-flow: row wrap;
