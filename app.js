@@ -37,6 +37,11 @@
     ];
 
     $scope.sendBasicMessage = function() {
+      //$http.post('/api/basicMessage', { users: $scope.clients, message: $scope.basicMessage } )
+      //  .then(function(res) {
+      //    console.log(res.data);
+      //  });
+
       console.log('basicMessage: ', $scope.basicMessage);
     };
 

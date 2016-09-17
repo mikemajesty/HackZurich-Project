@@ -1,0 +1,25 @@
+{
+  "name": "node-js-getting-started",
+  "description": "A sample Node.js app using Express 4",
+  "main": "index.js",
+  "authors": [
+    "Felipe Bernardes <bernardes.flp@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-css": "normalize.css#^4.2.0"
+  }
+}
