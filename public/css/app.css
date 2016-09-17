@@ -386,6 +386,9 @@ p {
   padding: 0;
   color: #555; }
 
+button {
+  border: 0; }
+
 header {
   padding: 2vh 4vw; }
 
@@ -403,7 +406,7 @@ html {
         max-height: 100vh; } }
 
 button {
-  background-color: #4bbf6b;
+  background-color: #2b7941;
   color: #fff;
   -webkit-border-radius: 20px;
   border-radius: 20px;
@@ -497,7 +500,7 @@ td {
     padding: 0; }
 
 .index header {
-  min-height: 100vh;
+  min-height: 95vh;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -505,15 +508,64 @@ td {
   -webkit-flex-flow: column;
   -ms-flex-flow: column;
   flex-flow: column; }
+  @media (min-width: 1024px) {
+    .index header {
+      -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+      flex-flow: row wrap; } }
 
-.index h1,
-.index h2,
-.index p {
-  margin: auto; }
+.index .intro {
+  margin: auto;
+  width: 90%; }
+
+.index .form-wrapper {
+  margin: 4rem auto 2rem auto;
+  width: 90%;
+  max-width: 280px; }
+  .index .form-wrapper form {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px; }
+  .index .form-wrapper button {
+    padding: 1rem !important;
+    display: block;
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease; }
+    .index .form-wrapper button:hover {
+      background: #2fccbc; }
+  .index .form-wrapper button,
+  .index .form-wrapper input {
+    margin: .5rem auto;
+    text-align: center; }
 
 .index h1 {
   font-weight: bold;
-  letter-spacing: 0.4; }
+  letter-spacing: 0.4;
+  font-size: 4.5rem;
+  margin-bottom: 1rem; }
 
 .index h2 {
-  font-size: 2rem; }
+  margin-top: 1rem;
+  font-size: 1.9rem;
+  text-align: left;
+  color: #fff; }
+
+.index .go {
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  height: 5vh; }
+  .index .go a {
+    display: block;
+    margin: auto;
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease; }
+    .index .go a:hover {
+      color: #0279b3; }
+    @media (min-width: 1024px) {
+      .index .go a {
+        margin: auto 2rem auto auto; } }
