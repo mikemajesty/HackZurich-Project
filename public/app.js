@@ -19,10 +19,13 @@
     $interval(() => {
         $http.get('/api/clients').then((res) => {
             $scope.clients = res.data;
+            // .filter((element) => {
+            //     return element.clientMac === '30:cb:f8:ad:0f:1a';
+            // });
         }, (error) => {
             console.log(error);
         });
-    }, 10000, 0);
+    }, 5000, 0);
 
     $scope.sendBasicMessage = function() {
       //$http.post('/api/basicMessage', { users: $scope.clients, message: $scope.basicMessage } )

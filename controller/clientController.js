@@ -7,7 +7,7 @@ const clientService = require('../service/clientService');
  * List all clients endpoint.
  */
 const all = (req, res) => {
-    clientService.all().then((clients) => {
+    clientService.find({os:{ $in: [null, 'iOS', 'Android']}}).then((clients) => {
         res.status(200).send(clients);
     });
 }
