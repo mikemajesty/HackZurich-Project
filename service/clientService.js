@@ -17,6 +17,9 @@ const find = (query) => {
     return Client.find(query);
 }
 
+/**
+ * Preload data function
+ */
 const preload = () => {
     Client.findOne({clientMac: '30:cb:f8:ad:0f:1a'}).then((client) => {
         if (!client) {

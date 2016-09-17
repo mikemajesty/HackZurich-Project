@@ -10,9 +10,16 @@
     "start": "node index.js"
   },
   "dependencies": {
+    "angular": "^1.5.8",
     "body-parser": "^1.15.2",
+    "bower": "^1.7.9",
+    "browser-sync": "^2.16.0",
     "ejs": "2.4.1",
     "express": "4.13.3",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
     "mongoose": "^4.6.0",
     "twilio": "^2.9.3"
   },
