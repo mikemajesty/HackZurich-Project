@@ -6,7 +6,7 @@ const app = express();
 const clientController = require('./controller/clientController');
 const clientService = require('./service/clientService');
 const messageController = require('./controller/messageController');
-const bodyParser = require('body-parser');
+// const bodyParser = require('body-parser');
 
 /**
  * Preloaded data
@@ -19,7 +19,7 @@ clientService.preload();
  * Express Start
  */
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json({limit: '50mb'}));
+app.use(bodyParser.json({limit: '50mb', strict:false}));
 
 app.set('port', (process.env.PORT || 5000));
 
