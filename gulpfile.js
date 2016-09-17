@@ -10,7 +10,16 @@ gulp.task('dependencies', function() {
     .pipe(rename('_normalize.scss'))
     .pipe(gulp.dest('scss/libs'));
 
+    gulp.src('bower_components/materialize/dist/**/*.*')
+    .pipe(gulp.dest('public'));
+
     gulp.src('bower_components/ngmap/build/scripts/ng-map.min.js')
+    .pipe(gulp.dest('public/js'));
+
+    gulp.src('bower_components/jquery/dist/jquery.min.js')
+    .pipe(gulp.dest('public/js'));
+
+    gulp.src('bower_components/jquery/dist/jquery.min.map')
     .pipe(gulp.dest('public/js'));
 });
 

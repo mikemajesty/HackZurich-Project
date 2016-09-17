@@ -3,6 +3,14 @@
 
 $main-color: #4bbf6b;
 
+html {
+    height: 100%;
+
+    body {
+        height: 100%;
+    }
+}
+
 button {
   background-color: $main-color;
   color: #fff;

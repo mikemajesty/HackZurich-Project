@@ -402,6 +402,11 @@ header {
 section {
   padding: 2vh 4vw; }
 
+html {
+  height: 100%; }
+  html body {
+    height: 100%; }
+
 button {
   background-color: #4bbf6b;
   color: #fff;

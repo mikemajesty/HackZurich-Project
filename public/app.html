@@ -9,20 +9,25 @@
     <meta name="theme-color" content="#4bbf6b">
 
     <link type="text/css" rel="stylesheet" href="./css/app.css" />
+    <link type="text/css" rel="stylesheet" href="./css/materialize.min.css" />
+
     <script type="text/javascript" src="angular.min.js"></script>
     <script type="text/javascript" src="app.js"></script>
     <script type="text/javascript" src="js/ng-map.min.js"></script>
 
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+
     <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBVsvUEsVhpCVoneLzoPRwnv_FL05W2raM"></script>
   </head>
   <body ng-controller='AppCtrl'>
-    <header>
+    <!--<header>
       <h1>yoruba</h1>
       <p>
         indoor messaging made easy
       </p>
-    </header>
-    <section class="welcome">
+    </header>-->
+    <!--<section class="welcome">
       <h2>welcome, hackzurich staff member!</h1>
       <p>Yoruba is a indoor tracking & messaging platform.</p>
       <p>Try messaging whoever you want (or everyone) inside HackZurich 2016!</p>
@@ -31,8 +36,6 @@
           <thead>
             <tr>
               <th><input type="checkbox"></th>
-              <!--<th>Name</th>
-              <th>Phone Number</th>-->
               <th>Mac Address</th>
               <th>Lat</th>
               <th>Lng</th>
@@ -41,8 +44,6 @@
           <tbody>
             <tr ng-repeat="client in clients">
                 <td><input type="checkbox"></td>
-                <!--<td>{{ client.name }}</td>
-                <td>{{ client.phoneNumber }}</td>-->
                 <td>{{ client.clientMac }}</td>
                 <td>{{ client.location.lat }}</td>
                 <td>{{ client.location.lng }}</td>
@@ -53,14 +54,14 @@
         <input type="text" ng-model="$parent.basicMessage">
         <button type="submit" ng-click="sendBasicMessage()">send message</button>
       </form>
-    </section>
-    <section class="map" style="height:500px;">
-      <ng-map center="[47.389850, 8.515632]" zoom="19" style="height:500px">
-          <marker ng-repeat="client in clients"
-                  position="[{{client.location.lat}}, {{client.location.lng}}]"
-                  icon="/images/dot.png">
-          </marker>
-      </ng-map>
-    </section>
+    </section>-->
+    <ng-map center="[47.389850, 8.515632]" zoom="19" style="width:100%;height:100%;" mapTypeControl="false">
+        <marker ng-repeat="client in clients"
+                position="[{{client.location.lat}}, {{client.location.lng}}]"
+                icon="/images/dot.png">
+        </marker>
+    </ng-map>
+    <div class="card" style="position:absolute;top:20px;right:20px;width:200px;bottom:20px">
+    </div>
   </body>
 </html>
