@@ -43,6 +43,7 @@ const save = (clients) => {
             if (clientDB) {
                 clientDB.seenTime = client.seenTime;
                 clientDB.location = client.location;
+                clientDB.os = client.os;
             } else {
                 clientDB = new Client(client);
             }
