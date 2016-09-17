@@ -553,6 +553,22 @@ td {
       .index header .key-features {
         display: block; } }
 
+.index .brazilian-company {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%); }
+  @media (min-width: 1024px) {
+    .index .brazilian-company {
+      left: initial;
+      -webkit-transform: initial;
+      -ms-transform: initial;
+      transform: initial;
+      right: 3%;
+      bottom: 3%; } }
+
 .index .intro {
   margin: auto;
   width: 90%; }

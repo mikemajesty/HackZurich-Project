@@ -211,6 +211,20 @@ td {
     }
   }
 
+  .brazilian-company {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @media (min-width: 1024px) {
+      left: initial;
+      transform: initial;
+      right: 3%;
+      bottom: 3%;
+    }
+  }
+
   .intro {
     margin: auto;
     width: 90%;
