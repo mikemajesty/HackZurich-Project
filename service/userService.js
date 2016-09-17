@@ -1,9 +1,17 @@
 var User = require('../data/model/user');
 
 var save = function(users) {
-  return User.insertMany(users).then(function(data, err) {
-    if(err) console.log(err);
-  });
+    users.forEach((user) => {
+        User.findOne({clientMac: user.clientMac}).then((userDB) => {
+            if (userDB) {
+                userDB.seenTime = user.seenTime;
+            } else {
+                userDB = new User(user);
+            }
+
+            userDB.save();
+        });
+    });
 }
 
 module.exports = {

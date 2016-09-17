@@ -2,9 +2,7 @@ var mongoose = require('../connection');
 
 var user = mongoose.Schema({
     name: String,
-    fullNumber: String,
-    macAdress: String,
-    active: Boolean,
+    phoneNumber: String,
     ipv4: String,
     location:
      { lat: Number,
