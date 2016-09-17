@@ -19,7 +19,7 @@
     var MINUTE = 2;
     var myStartDate = new Date();
     myStartDate.setMinutes(myStartDate.getMinutes() - MINUTE);
-    $scope.date = myStartDate;
+    $scope.date = myStartDate.toISOString();
 
     $interval(() => {
         $http.get('/api/clients').then((res) => {
