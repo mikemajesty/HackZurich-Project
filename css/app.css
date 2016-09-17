@@ -410,6 +410,10 @@ button {
   padding: .5rem;
   text-align: center; }
 
+table {
+  border: 2px solid #333;
+  margin: 0 auto; }
+
 header {
   background-color: #4bbf6b; }
   header h1 {
