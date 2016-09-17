@@ -19,7 +19,7 @@ clientService.preload();
  * Express Start
  */
 
-// app.use(parser({limit:'20mb'}));
+app.use(parser({limit:1024 * 1024 * 20, strict: false}));
 
 app.set('port', (process.env.PORT || 5000));
 
