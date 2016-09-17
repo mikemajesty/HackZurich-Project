@@ -16,6 +16,11 @@
     $scope.clients = [
     ];
 
+    var MINUTE = 2;
+    var myStartDate = new Date();
+    myStartDate.setMinutes(myStartDate.getMinutes() - MINUTE);
+    $scope.date = myStartDate;
+
     $interval(() => {
         $http.get('/api/clients').then((res) => {
             if (!$scope.clients.length) {
