@@ -10,7 +10,7 @@ var save = function (req, res) {
                 active: req.body.active
               }
     console.log(user);
-    userService.save([user]).then((data) => {
+    userService.save(user).then((data) => {
       res.json(data);
     });
 }
