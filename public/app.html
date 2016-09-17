@@ -11,6 +11,9 @@
     <link type="text/css" rel="stylesheet" href="./css/app.css" />
     <script type="text/javascript" src="angular.min.js"></script>
     <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="js/ng-map.min.js"></script>
+
+    <script src="http://maps.google.com/maps/api/js"></script>
   </head>
   <body ng-controller='AppCtrl'>
     <header>
@@ -46,6 +49,11 @@
         <input type="text" ng-model="$parent.basicMessage">
         <button type="submit" ng-click="sendBasicMessage()">send message</button>
       </form>
+    </section>
+    <section class="map" style="height:500px;">
+      <ng-map center="[47.389850, 8.515632]" zoom="19" style="height:500px">
+          <marker ng-repeat="client in clients" position="[client.location.lat, client.location.lng]"></marker>
+      </ng-map>
     </section>
   </body>
 </html>

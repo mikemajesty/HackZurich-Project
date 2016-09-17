@@ -1,6 +1,6 @@
 (function(angular) {
   'use strict';
-  angular.module("yoruba", [])
+  angular.module("yoruba", ['ngMap'])
 
   .controller('AppCtrl', ['$http', '$scope', function($http, $scope) {
     console.log('ctrl loaded');
