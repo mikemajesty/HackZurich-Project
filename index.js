@@ -1,13 +1,11 @@
 var express = require('express');
 var app = express();
 var User = require('./data/model/user');
+var userService = require('./service/userService');
 
-var user = new User({ name: 'Mike Lima', fullNumber: '1532483712', macAdress: '3434234234324234', active: true });
+var user = new User({ name: 'Gabrel Lima', fullNumber: '1532483712', macAdress: '3434234234324234', active: true });
 
-user.save(function (err, user) {
-  if (err) return console.error(err);
-  console.log(user.name);
-});
+userService.save([user]);
 
 
 app.set('port', (process.env.PORT || 5000));
