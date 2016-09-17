@@ -27,7 +27,7 @@
             //   return;
             // }
 
-            $scope.clientes.filter((client) => {
+            $scope.clients.filter((client) => {
                 return client.visible;
             }).forEach((client) => {
                 for (var i = 0; i < res.data.length; i++) {
