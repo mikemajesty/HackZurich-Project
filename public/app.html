@@ -21,40 +21,6 @@
     <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBVsvUEsVhpCVoneLzoPRwnv_FL05W2raM"></script>
   </head>
   <body ng-controller='AppCtrl'>
-    <!--<header>
-      <h1>yoruba</h1>
-      <p>
-        indoor messaging made easy
-      </p>
-    </header>-->
-    <!--<section class="welcome">
-      <h2>welcome, hackzurich staff member!</h1>
-      <p>Yoruba is a indoor tracking & messaging platform.</p>
-      <p>Try messaging whoever you want (or everyone) inside HackZurich 2016!</p>
-      <form ng-if="clients">
-        <table>
-          <thead>
-            <tr>
-              <th><input type="checkbox"></th>
-              <th>Mac Address</th>
-              <th>Lat</th>
-              <th>Lng</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr ng-repeat="client in clients">
-                <td><input type="checkbox"></td>
-                <td>{{ client.clientMac }}</td>
-                <td>{{ client.location.lat }}</td>
-                <td>{{ client.location.lng }}</td>
-            </tr>
-          </tbody>
-        </table>
-        <label>your message</label>
-        <input type="text" ng-model="$parent.basicMessage">
-        <button type="submit" ng-click="sendBasicMessage()">send message</button>
-      </form>
-    </section>-->
     <ng-map center="[47.389850, 8.515632]" zoom="19" style="width:100%;height:100%;" mapTypeControl="false">
         <marker ng-repeat="client in clients"
                 position="[{{client.location.lat}}, {{client.location.lng}}]"
@@ -68,20 +34,9 @@
             <th colspan="3">Persons In HackZurich 2016</th>
           </tr>
           <tr>
-            <td>
-              <div class="switch">
-                <label>
-                  Hide Safe
-                  <input type="checkbox" ng-model="hideSafe" value="false">
-                  <span class="lever"></span>
-                </label>
-              </div>
-            </td>
-          </tr>
-          <tr>
             <th width="40">
-              <input type="checkbox" ng-model="showAll" checked>
-              <label></label>
+              <input type="checkbox" ng-model="showAll" name="showAll" checked>
+              <label for="showAll"></label>
             </th>
             <th data-field="name" class="text-left">MAC Address</th>
             <th data-field="price">Safe</th>

@@ -431,7 +431,8 @@ aside,
   bottom: 20px;
   opacity: 0.9;
   -webkit-transition: all .2s ease;
-  transition: all .2s ease; }
+  transition: all .2s ease;
+  overflow: hidden; }
   aside:hover,
   .card:hover {
     opacity: 1; }
@@ -446,6 +447,8 @@ aside,
   position: absolute;
   top: 0;
   width: 100%; }
+  .table-top tr:nth-of-type(2) {
+    padding-left: 20px; }
 
 .table-overflow {
   overflow: scroll; }
@@ -466,9 +469,6 @@ aside,
     width: 80% !important; }
   .top-table tr:nth-of-type(3) td:nth-of-type(3) {
     width: 15% !important; }
-
-tbody {
-  overflow: scroll; }
 
 .top-table tr:first-of-type {
   background: #4bbf6b;
