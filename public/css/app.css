@@ -393,7 +393,8 @@ section {
   padding: 2vh 4vw; }
 
 html {
-  height: 100%; }
+  height: 100%;
+  font-family: 'Montserrat', sans-serif; }
   html body {
     height: 100%;
     position: relative; }
@@ -494,3 +495,25 @@ td {
     width: 100%;
     margin: 5px 0 0 0;
     padding: 0; }
+
+.index header {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column; }
+
+.index h1,
+.index h2,
+.index p {
+  margin: auto; }
+
+.index h1 {
+  font-weight: bold;
+  letter-spacing: 0.4; }
+
+.index h2 {
+  font-size: 2rem; }
