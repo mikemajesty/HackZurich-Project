@@ -16,7 +16,7 @@ const all = (req, res) => {
  * Save a list of clients from Cisco Meraki.
  */
 const save = (req, res) => {
-    console.log(req);
+    console.log(req.body);
     clientService.save(req.body);
 
     res.status(200).send();
