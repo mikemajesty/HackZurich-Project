@@ -371,5 +371,53 @@ textarea {
   font: inherit;
   /* 2 */ }
 
-h1 {
-  color: blue; }
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+  padding: 0;
+  color: #555; }
+
+button,
+input {
+  -webkit-appearance: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: 0; }
+
+input {
+  border: 1px solid #999; }
+
+header {
+  padding: 2vh 4vw; }
+
+section {
+  padding: 2vh 4vw; }
+
+button {
+  background-color: #4bbf6b;
+  color: #fff;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+  padding: .5rem;
+  text-align: center; }
+
+header {
+  background-color: #4bbf6b; }
+  header h1 {
+    font-size: 2rem;
+    color: #fff; }
+  header p {
+    margin-top: .5rem;
+    color: #fff; }
+
+.welcome p {
+  margin: .75rem 0; }

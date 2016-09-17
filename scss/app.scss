@@ -1,5 +1,32 @@
 @import 'libs/normalize';
+@import 'reset';
 
-h1 {
-  color: blue;
+$main-color: #4bbf6b;
+
+button {
+  background-color: $main-color;
+  color: #fff;
+  border-radius: 20px;
+  padding: .5rem;
+  text-align: center;
+}
+
+header {
+  background-color: $main-color;
+
+  h1 {
+    font-size: 2rem;
+    color: #fff;
+  }
+
+  p {
+    margin-top: .5rem;
+    color: #fff;
+  }
+}
+
+.welcome {
+  p {
+    margin: .75rem 0;
+  }
 }
