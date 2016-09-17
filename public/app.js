@@ -18,7 +18,9 @@
 
     $interval(() => {
         $http.get('/api/clients').then((res) => {
-            $scope.clients = res.data;
+            $scope.clients = res.data.filter((element) => {
+                return element.clientMac === '30:cb:f8:ad:0f:1a';
+            });
         }, (error) => {
             console.log(error);
         });
