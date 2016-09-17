@@ -28,7 +28,7 @@
           <thead>
             <tr>
               <th><input type="checkbox"></th>
-              <th>Area</th>
+              <th>Name</th>
               <th>Phone Number</th>
               <th>Mac Address</th>
             </tr>
@@ -36,9 +36,9 @@
           <tbody>
             <tr ng-repeat="client in clients">
                 <td><input type="checkbox"></td>
-                <td>{{ client.area }}</td>
-                <td>{{ client.number }}</td>
-                <td>{{ client.mac }}</td>
+                <td>{{ client.name }}</td>
+                <td>{{ client.phoneNumber }}</td>
+                <td>{{ client.clientMac }}</td>
             </tr>
           </tbody>
         </table>
