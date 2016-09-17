@@ -6,9 +6,12 @@ var gulp = require('gulp'),
 
 
 gulp.task('dependencies', function() {
-  gulp.src('bower_components/normalize-css/normalize.css')
-  .pipe(rename('_normalize.scss'))
-  .pipe(gulp.dest('scss/libs'));
+    gulp.src('bower_components/normalize-css/normalize.css')
+    .pipe(rename('_normalize.scss'))
+    .pipe(gulp.dest('scss/libs'));
+
+    gulp.src('bower_components/ngmap/build/scripts/ng-map.min.js')
+    .pipe(gulp.dest('public/js'));
 });
 
 gulp.task('sass', function() {

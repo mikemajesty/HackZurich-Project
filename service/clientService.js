@@ -42,6 +42,7 @@ const save = (clients) => {
         Client.findOne({clientMac: client.clientMac}).then((clientDB) => {
             if (clientDB) {
                 clientDB.seenTime = client.seenTime;
+                clientDB.location = client.location;
             } else {
                 clientDB = new Client(client);
             }
