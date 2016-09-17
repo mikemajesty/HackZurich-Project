@@ -526,6 +526,21 @@ td {
   .index header .powered-by,
   .index header .key-features {
     display: none; }
+  .index header .powered-by {
+    position: absolute;
+    bottom: 2%;
+    left: 2%; }
+    .index header .powered-by ul,
+    .index header .powered-by li {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex; }
+    .index header .powered-by ul {
+      height: 40px; }
+    .index header .powered-by img {
+      margin: auto 1rem;
+      width: 80px; }
   @media (min-width: 1024px) {
     .index header {
       -webkit-flex-flow: row wrap;
@@ -537,6 +552,22 @@ td {
       .index header .powered-by,
       .index header .key-features {
         display: block; } }
+
+.index .brazilian-company {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%); }
+  @media (min-width: 1024px) {
+    .index .brazilian-company {
+      left: initial;
+      -webkit-transform: initial;
+      -ms-transform: initial;
+      transform: initial;
+      right: 3%;
+      bottom: 3%; } }
 
 .index .intro {
   margin: auto;

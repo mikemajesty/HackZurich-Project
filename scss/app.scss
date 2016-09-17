@@ -176,6 +176,26 @@ td {
       display: none;
     }
 
+    .powered-by {
+      position: absolute;
+      bottom: 2%;
+      left: 2%;
+
+      ul,
+      li {
+        display: flex;
+      }
+
+      ul {
+        height: 40px;
+      }
+
+      img {
+        margin: auto 1rem;
+        width: 80px;
+      }
+    }
+
     @media (min-width: 1024px) {
       flex-flow: row wrap;
       text-align: center;
@@ -188,6 +208,20 @@ td {
       .key-features {
         display: block;
       }
+    }
+  }
+
+  .brazilian-company {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @media (min-width: 1024px) {
+      left: initial;
+      transform: initial;
+      right: 3%;
+      bottom: 3%;
     }
   }
 
