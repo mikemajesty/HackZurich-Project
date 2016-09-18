@@ -80,6 +80,10 @@ aside,
   tr:nth-of-type(2) {
     padding-left: 20px;
   }
+
+  th:nth-of-type(3) {
+    width: 15% !important;
+    }
 }
 
 // .table-overflow {

@@ -5,7 +5,7 @@
   .controller('AppCtrl', ['$http', '$interval', '$scope', function($http, $interval, $scope) {
     console.log('ctrl loaded');
 
-    $scope.basicMessage = '';
+    $scope.message = "";
 
     //get clients
     //$http.get('/api/clients').then(function (clients) {
@@ -51,7 +51,7 @@
 
         $http.post('/api/messages', { clients: clientIds, message: message } )
         .then(function(res) {
-            console.log(res.data);
+            $scope.message = "";
         });
     };
 
