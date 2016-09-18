@@ -193,6 +193,7 @@ td {
       img {
         margin: auto 1rem;
         width: 80px;
+        filter: grayscale(100%) brightness(100%);
       }
     }
 
