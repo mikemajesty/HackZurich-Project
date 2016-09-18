@@ -46,7 +46,7 @@
           <table>
             <tr ng-repeat="client in clients">
               <td width="40">
-                <input id="client-{{$index}}" type="checkbox" ng-model="client.show">
+                <input id="client-{{$index}}" type="checkbox" ng-model="client.selected">
                 <label for="client-{{$index}}"></label>
               </td>
               <td class="text-left">{{ client.clientMac }}</td>

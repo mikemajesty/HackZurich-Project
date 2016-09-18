@@ -23,10 +23,11 @@
     $interval(() => {
         $http.get('/api/clients').then((res) => {
             $scope.clients.filter((client) => {
-                return client.visible;
+                return client.visible || client.selected;
             }).forEach((client) => {
                 for (var i = 0; i < res.data.length; i++) {
                     if (res.data[i].clientMac == client.clientMac) {
+                        res.data[i].selected = client.selected;
                         res.data[i].visible = client.visible;
 
                         break;
