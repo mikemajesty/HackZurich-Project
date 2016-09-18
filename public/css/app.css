@@ -446,20 +446,12 @@ aside,
 .text-left {
   text-align: left; }
 
-.table-wrapper {
-  position: relative; }
-
 .table-top {
   position: absolute;
   top: 0;
   width: 100%; }
   .table-top tr:nth-of-type(2) {
     padding-left: 20px; }
-
-.table-overflow {
-  overflow: scroll; }
-  .table-overflow table {
-    height: 100%; }
 
 .table-overflow {
   overflow: auto;
