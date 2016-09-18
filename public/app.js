@@ -42,16 +42,18 @@
         });
     }, 5000, 0);
 
-    $scope.sendBasicMessage = function() {
-      //$http.post('/api/basicMessage', { users: $scope.clients, message: $scope.basicMessage } )
-      //  .then(function(res) {
-      //    console.log(res.data);
-      //  });
+    $scope.sendBasicMessage = function(clients, message) {
+        var clientIds = clients.map((client) => {
+            return client.id;
+        });
 
-      console.log('basicMessage: ', $scope.basicMessage);
+        $http.post('/api/messages', { clients: clientIds, message: message } )
+        .then(function(res) {
+            console.log(res.data);
+        });
     };
 
-    $scope.checkAll = function(checkAll) {
+    $scope.onCheckAll = function(checkAll) {
       $scope.clients.forEach((client) => {
           client.selected = checkAll;
       });
