@@ -22,11 +22,6 @@
 
     $interval(() => {
         $http.get('/api/clients').then((res) => {
-            // if (!$scope.clients.length) {
-            //   $scope.clients = res.data;
-            //   return;
-            // }
-
             $scope.clients.filter((client) => {
                 return client.visible;
             }).forEach((client) => {

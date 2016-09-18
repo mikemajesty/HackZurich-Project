@@ -461,7 +461,7 @@ aside,
 
 .table-overflow {
   overflow: auto;
-  height: 65vh; }
+  height: 57vh; }
   .table-overflow table tr td:nth-of-type(2) {
     width: 80% !important; }
   .table-overflow table tr td:nth-of-type(3) {
