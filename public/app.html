@@ -35,8 +35,8 @@
           </tr>
           <tr>
             <th width="40">
-              <input id="showAll" class="filled-in" type="checkbox" ng-model="showAll">
-              <label for="showAll"></label>
+              <input id="checkAll" type="checkbox" ng-model="checkAll" ng-click="onCheckAll(checkAll)">
+              <label for="checkAll"></label>
             </th>
             <th class="text-left">MAC Address</th>
             <th>Visible</th>
@@ -47,7 +47,7 @@
             <tr ng-repeat="client in clients">
               <td width="40">
                 <p>
-                    <input type="checkbox" class="filled-in" id="{{client._id}}" ng-model="client.selected"/>
+                    <input type="checkbox" id="{{client._id}}" ng-model="client.selected"/>
                     <label for="{{client._id}}"></label>
                 </p>
               </td>
@@ -66,7 +66,7 @@
       </div>
       <div class="message-wrapper" style="text-align:center;position: absolute;bottom: 20px;">
         <input type="text" placeholder="Type a SMS to be sent" max="120" maxlength="120" style="font-size: 12px;padding: 0;margin-left: auto;margin-right: auto;width: 300px;height:30px;">
-        <button class="btn" onclick="sendBasicMessage()">send sms</button>
+        <button class="btn" ng-click="sendBasicMessage()">send sms</button>
       </div>
     </aside>
   </body>

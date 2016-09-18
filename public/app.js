@@ -50,6 +50,12 @@
 
       console.log('basicMessage: ', $scope.basicMessage);
     };
+
+    $scope.checkAll = function(checkAll) {
+      $scope.clients.forEach((client) => {
+          client.selected = checkAll;
+      });
+    };
   }]);
 
 })(angular);
