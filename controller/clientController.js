@@ -7,11 +7,11 @@ const clientService = require('../service/clientService');
  * List all clients endpoint.
  */
 const all = (req, res) => {
-    // var MINUTE = 5;
-    var MINUTE = 600000;
+    var MINUTE = 5;
+    // var MINUTE = 600000;
     var myStartDate = new Date();
     myStartDate.setMinutes(myStartDate.getMinutes() - MINUTE);
-    clientService.find({os:{ $in: [null, 'iOS', 'Android']}, seenTime: {$gte: myStartDate.toISOString()} }).limit(128)
+    clientService.find({os:{ $in: [null, 'iOS', 'Android']}, seenTime: {$gte: myStartDate.toISOString()} })
     .then((clients) => {
         res.status(200).send(clients);
     });

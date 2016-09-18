@@ -14,7 +14,7 @@ const all = () => {
  * Return by a criteria
  */
 const find = (query) => {
-    return Client.find(query).sort({clientMac: 1});
+    return Client.find(query).limit(128).sort({clientMac: 1});
 }
 
 /**
