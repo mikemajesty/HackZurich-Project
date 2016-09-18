@@ -43,8 +43,10 @@
     }, 5000, 0);
 
     $scope.sendBasicMessage = function(clients, message) {
-        var clientIds = clients.map((client) => {
-            return client.id;
+        var clientIds = clients.filter((client) => {
+            return client.selected;
+        }).map((client) => {
+            return client._id;
         });
 
         $http.post('/api/messages', { clients: clientIds, message: message } )
@@ -56,6 +58,12 @@
     $scope.onCheckAll = function(checkAll) {
       $scope.clients.forEach((client) => {
           client.selected = checkAll;
+      });
+    };
+
+    $scope.onVisibleAll = function(visibleAll) {
+      $scope.clients.forEach((client) => {
+          client.visible = visibleAll;
       });
     };
   }]);

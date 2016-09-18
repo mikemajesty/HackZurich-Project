@@ -39,7 +39,14 @@
               <label for="checkAll"></label>
             </th>
             <th class="text-left">MAC Address</th>
-            <th>Visible</th>
+            <th>
+                <div class="switch">
+                  <label>
+                    <input type="checkbox" ng-model="visibleAll" ng-change="onVisibleAll(visibleAll)"/>
+                    <span class="lever"></span>
+                  </label>
+                </div>
+            </th>
           </tr>
         </table>
         <div class="table-overflow" style="position: absolute;bottom: 140px;top: 90px;">
