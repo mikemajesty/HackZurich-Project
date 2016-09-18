@@ -3,8 +3,6 @@
   angular.module("yoruba", ['ngMap'])
 
   .controller('AppCtrl', ['$http', '$interval', '$scope', function($http, $interval, $scope) {
-    console.log('ctrl loaded');
-
     $scope.message = "";
 
     //get clients

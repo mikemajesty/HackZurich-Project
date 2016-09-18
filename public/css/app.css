@@ -452,8 +452,6 @@ aside,
   width: 100%; }
   .table-top tr:nth-of-type(2) {
     padding-left: 20px; }
-  .table-top th:nth-of-type(3) {
-    width: 15% !important; }
 
 .table-overflow {
   overflow: auto;
