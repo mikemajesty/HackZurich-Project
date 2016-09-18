@@ -72,8 +72,8 @@
         </div>
       </div>
       <div class="message-wrapper" style="text-align:center;position: absolute;bottom: 20px;">
-        <input type="text" ng-model="message" placeholder="Type a SMS to be sent" max="120" maxlength="120" style="font-size: 12px;padding: 0;margin-left: auto;margin-right: auto;width: 300px;height:30px;">
-        <button class="btn" ng-click="sendBasicMessage(clients, text)">send sms</button>
+        <input type="text" ng-model="message" placeholder="{{messagePlaceholder}}" max="120" maxlength="120" style="font-size: 12px;padding: 0;margin-left: auto;margin-right: auto;width: 300px;height:30px;">
+        <button class="btn" ng-click="sendBasicMessage(clients, message)">send sms</button>
       </div>
     </aside>
   </body>

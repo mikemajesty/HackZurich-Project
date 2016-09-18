@@ -4,6 +4,7 @@
 
   .controller('AppCtrl', ['$http', '$interval', '$scope', function($http, $interval, $scope) {
     $scope.message = "";
+    $scope.messagePlaceholder = "Type a SMS to be sent";
 
     //get clients
     //$http.get('/api/clients').then(function (clients) {
@@ -50,6 +51,7 @@
         $http.post('/api/messages', { clients: clientIds, message: message } )
         .then(function(res) {
             $scope.message = "";
+            $scope.messagePlaceholder = "Message sent!";
         });
     };
 
