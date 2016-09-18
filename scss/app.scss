@@ -14,6 +14,7 @@ html {
         @media (min-width: 768px) {
           max-height: 100vh;
         }
+        .gmnoprint { display:none  }
     }
 }
 
@@ -193,6 +194,7 @@ td {
       img {
         margin: auto 1rem;
         width: 80px;
+        filter: grayscale(100%);
       }
     }
 

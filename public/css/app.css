@@ -404,6 +404,8 @@ html {
     @media (min-width: 768px) {
       html body {
         max-height: 100vh; } }
+    html body .gmnoprint {
+      display: none; }
 
 button {
   background-color: #2b7941;
@@ -540,7 +542,9 @@ td {
       height: 40px; }
     .index header .powered-by img {
       margin: auto 1rem;
-      width: 80px; }
+      width: 80px;
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%); }
   @media (min-width: 1024px) {
     .index header {
       -webkit-flex-flow: row wrap;
