@@ -404,6 +404,8 @@ html {
     @media (min-width: 768px) {
       html body {
         max-height: 100vh; } }
+    html body .gmnoprint {
+      display: none; }
 
 button {
   background-color: #2b7941;
