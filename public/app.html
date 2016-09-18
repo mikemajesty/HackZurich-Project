@@ -47,7 +47,7 @@
             <tr ng-repeat="client in clients">
               <td width="40">
                 <p>
-                    <input type="checkbox" class="filled-in" id="{{client._id}}" />
+                    <input type="checkbox" class="filled-in" id="{{client._id}}" value="true" />
                     <label for="{{client._id}}"></label>
                 </p>
               </td>
@@ -55,7 +55,7 @@
               <td>
                 <div class="switch">
                   <label>
-                    <input type="checkbox" ng-model="client.visible">
+                    <input type="checkbox" ng-model="client.visible" value="true">
                     <span class="lever"></span>
                   </label>
                 </div>
