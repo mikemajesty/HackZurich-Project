@@ -35,7 +35,7 @@
           </tr>
           <tr>
             <th width="40">
-              <input type="checkbox" ng-model="showAll" name="showAll" checked>
+              <input id="showAll" type="checkbox" ng-model="showAll" name="showAll" checked>
               <label for="showAll"></label>
             </th>
             <th class="text-left">MAC Address</th>
@@ -46,8 +46,8 @@
           <table>
             <tr ng-repeat="client in clients">
               <td width="40">
-                <input type="checkbox" ng-model="client.show">
-                <label></label>
+                <input id="client-{{$index}}" type="checkbox" ng-model="client.show">
+                <label for="client-{{$index}}"></label>
               </td>
               <td class="text-left">{{ client.clientMac }}</td>
               <td>
