@@ -1,5 +1,7 @@
 # HackZurich - abroad indoor messaging made easy
 
+See project [hackzurich](http://hackzurich-2016.herokuapp.com)
+
 <hr>
 ### License
 
