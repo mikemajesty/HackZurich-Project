@@ -9,6 +9,7 @@ See project [hackzurich](http://hackzurich-2016.herokuapp.com)
 [![sended.png](https://s29.postimg.org/n4zfdqn47/sended.png)](https://postimg.org/image/wcrnufu6b/)
 
 <hr>
+
 ### License
 
 It is available under the MIT license.
